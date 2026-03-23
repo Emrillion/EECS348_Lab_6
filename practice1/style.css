@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.profile-box {
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+img {
+    width: 150px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+.section {
+    margin-top: 20px;
+    text-align: left;
+}
