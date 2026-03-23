@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practice 4 — Multiplication Table</title>
+</head>
+
+<body>
+
+<h1>EECS 348 Lab Six Practice Four</h1>
+
+<form method="post">
+
+    Size of the multiplication table:
+    <input type="text" name="size">
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<br>
+
+<?php
+if (isset($_POST['size'])) {
+
+    $n = intval($_POST['size']);
+
+    if ($n > 0) {
+
+        echo "<table border='1' cellpadding='5'>";
+
+        // Top header row
+        echo "<tr><th></th>";
+        for ($i = 1; $i <= $n; $i++) {
+            echo "<th>$i</th>";
+        }
+        echo "</tr>";
+
+        // Table body
+        for ($i = 1; $i <= $n; $i++) {
+
+            echo "<tr>";
+
+            // Row index
+            echo "<th>$i</th>";
+
+            // Multiplication values
+            for ($j = 1; $j <= $n; $j++) {
+                $value = $i * $j;
+                echo "<td>$value</td>";
+            }
+
+            echo "</tr>";
+        }
+
+        echo "</table>";
+
+    } else {
+        echo "Please enter a positive number.";
+    }
+}
+?>
+
+</body>
+</html>
