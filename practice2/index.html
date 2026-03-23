@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practice 2 — CSS Font Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>EECS 348 Lab Six Practice Two</h1>
+
+<!-- Paragraph -->
+<div id="box">
+    Paragraph to be altered.
+</div>
+
+<!-- Controls -->
+
+<div class="controls">
+
+    Border R(0-255):
+    <input id="br" type="text"><br>
+
+    Border G(0-255):
+    <input id="bg" type="text"><br>
+
+    Border B(0-255):
+    <input id="bb" type="text"><br>
+
+    Border Width:
+    <input id="bw" type="text"><br>
+
+    Background R(0-255):
+    <input id="rr" type="text"><br>
+
+    Background G(0-255):
+    <input id="rg" type="text"><br>
+
+    Background B(0-255):
+    <input id="rb" type="text"><br>
+
+    <button onclick="changeColor()">Change the color!</button>
+
+</div>
+
+<script>
+function changeColor() {
+
+    let br = document.getElementById("br").value;
+    let bg = document.getElementById("bg").value;
+    let bb = document.getElementById("bb").value;
+    let bw = document.getElementById("bw").value;
+
+    let rr = document.getElementById("rr").value;
+    let rg = document.getElementById("rg").value;
+    let rb = document.getElementById("rb").value;
+
+    let box = document.getElementById("box");
+
+    box.style.borderColor = "rgb(" + br + "," + bg + "," + bb + ")";
+    box.style.borderWidth = bw + "px";
+    box.style.backgroundColor = "rgb(" + rr + "," + rg + "," + rb + ")";
+}
+</script>
+
+</body>
+</html>
